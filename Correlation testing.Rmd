@@ -1,0 +1,55 @@
+---
+title: "440 project"
+author: "Yuan Wang"
+date: "12/2/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T,  eval=T ,tidy=TRUE, tidy.opts=list(width.cutoff=60))
+```
+
+
+```{r}
+state_all = read.csv("state_all.csv")
+summary(state_all)
+
+```{r}
+aps <- state_all$Average.shooting.per.1.000.000
+ml <- state_all$Marijuana.Legality
+
+aov1 <- aov(aps~ml)
+anova(aov1)
+```
+
+```{r}
+tps <- state_all$Total..shooting
+ml <- state_all$Marijuana.Legality
+
+aov2 <- aov(tps~ml)
+anova(aov2)
+```
+
+```{r}
+t <- 0.68*sqrt(49/(1-0.68^2))
+t
+2*pt(-t, 49)
+```
+
+```{r}
+t <- 0.59*sqrt(49/(1-0.59^2))
+t
+2*pt(-t, 49)
+```
+
+```{r}
+t <- 0.48*sqrt(49/(1-0.48^2))
+t
+2*pt(-t, 49)
+```
+
+```{r}
+t <- 0.64*sqrt(48/(1-0.64^2))
+t
+2*pt(-t, 49)
+```
