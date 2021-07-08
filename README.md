@@ -1,4 +1,4 @@
-# DSC440-Data-Mining
+# DSC440-Data-Mining 
 
 Paper & PPT
 1. Paper: US fatal police shooting analysis and prediction.pdf, https://arxiv.org/pdf/2106.15298.pdf
